@@ -9,10 +9,10 @@
 
 
 makeCacheMatrix <- function(sample = matrix()) {
-  invsample <- NULL
+  invsample <- 0
   set <- function(x) {
     Sample <<- x
-    invsample <<- NULL
+    invsample <<- 0
   }
   get <- function() sample
   setInverse <- function(inverse) inv <<- inverse
