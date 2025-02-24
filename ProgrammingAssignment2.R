@@ -9,10 +9,10 @@
 
 
 makeCacheMatrix <- function(sample = matrix()) {
-  invsample <- 0
+  invsample <- NULL
   set <- function(x) {
     Sample <<- x
-    invsample <<- 0
+    invsample <<- NULL
   }
   get <- function() sample
   setInverse <- function(inverse) inv <<- inverse
@@ -41,3 +41,14 @@ cacheSolve <- function(sample, ...) {
   sample$setInverse(invsample)
   invsample
 }
+
+
+
+### testing functions ####
+
+
+matrix_1 <- makeCacheMatrix(matrix(1:4, 2, 2))
+
+matrix_1$get()
+matrix_1$getInverse()
+
